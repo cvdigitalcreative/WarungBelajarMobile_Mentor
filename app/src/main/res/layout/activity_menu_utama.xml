@@ -44,33 +44,33 @@
                 android:gravity="center_horizontal">
 
                 <Button
-                    android:id="@+id/btn_konfirmasi_pembayaran"
+                    android:id="@+id/btn_updateJadwal"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
                     android:background="@android:color/holo_blue_dark"
-                    android:textColor="@android:color/white"
                     android:text="Update Jadwal"
+                    android:textColor="@android:color/white"
                     tools:ignore="HardcodedText" />
 
                 <Button
-                    android:id="@+id/btn_buat_grup"
+                    android:id="@+id/btn_jadwalMengajar"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:background="@android:color/holo_blue_dark"
-                    android:textColor="@android:color/white"
                     android:text="Jadwal Ngajar"
+                    android:textColor="@android:color/white"
                     tools:ignore="HardcodedText" />
 
                 <Button
-                    android:id="@+id/btn_absensi"
+                    android:id="@+id/btn_profile"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:background="@android:color/holo_blue_dark"
-                    android:textColor="@android:color/white"
                     android:text="My Profile"
+                    android:textColor="@android:color/white"
                     tools:ignore="HardcodedText" />
             </LinearLayout>
         </LinearLayout>

@@ -1,4 +1,6 @@
 package com.example.user.warungbelajarmobile_mentor.View.Activity;
 
-public class BaseUpdateJadwal {
+import android.support.v7.app.AppCompatActivity;
+
+public class BaseUpdateJadwal extends AppCompatActivity{
 }

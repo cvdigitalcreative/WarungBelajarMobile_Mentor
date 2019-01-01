@@ -42,7 +42,7 @@
                 app:errorEnabled="true">
 
                 <EditText
-                    android:id="@+id/email"
+                    android:id="@+id/et_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Email"
@@ -56,7 +56,7 @@
                 app:errorEnabled="true">
 
                 <EditText
-                    android:id="@+id/kata_sandi"
+                    android:id="@+id/et_katasandi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Kata Sandi"
