@@ -61,36 +61,36 @@
                                 android:textSize="20sp"
                                 android:textColor="#FFC9BF01" />
 
-                            <RadioGroup
+                            <LinearLayout
                                 android:id="@+id/selasa"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/selasa_jam1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="10.00-12.00"/>
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/selasa_jam2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="13.00-15.00"/>
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/selasa_jam3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="16.00-18.00"/>
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/selasa_jam4"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="19.00-21.00"/>
-                            </RadioGroup>
+                            </LinearLayout>
                         </LinearLayout>
 
                     </LinearLayout>
@@ -114,36 +114,36 @@
                                 android:textSize="20sp"
                                 android:textColor="#FFC9BF01" />
 
-                            <RadioGroup
+                            <LinearLayout
                                 android:id="@+id/rabu"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/rabu_jam1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="10.00-12.00"/>
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/rabu_jam2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="13.00-15.00"/>
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/rabu_jam3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="16.00-18.00"/>
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/rabu_jam4"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="19.00-21.00"/>
-                            </RadioGroup>
+                            </LinearLayout>
                         </LinearLayout>
 
                     </LinearLayout>
@@ -167,36 +167,36 @@
                                 android:textSize="20sp"
                                 android:textColor="#FFC9BF01" />
 
-                            <RadioGroup
+                            <LinearLayout
                                 android:id="@+id/kamis"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/kamis_jam1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="10.00-12.00"/>
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/kamis_jam2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="13.00-15.00"/>
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/kamis_jam3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="16.00-18.00"/>
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/kamis_jam4"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="19.00-21.00"/>
-                            </RadioGroup>
+                            </LinearLayout>
                         </LinearLayout>
 
                     </LinearLayout>
@@ -229,36 +229,36 @@
                                 android:textSize="20sp"
                                 android:textColor="#FFC9BF01" />
 
-                            <RadioGroup
+                            <LinearLayout
                                 android:id="@+id/jumat"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/jumat_jam1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="10.00-12.00"/>
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/jumat_jam2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="13.00-15.00"/>
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/jumat_jam3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="16.00-18.00"/>
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/jumat_jam4"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="19.00-21.00"/>
-                            </RadioGroup>
+                            </LinearLayout>
                         </LinearLayout>
 
                     </LinearLayout>
@@ -282,36 +282,36 @@
                                 android:textSize="20sp"
                                 android:textColor="#FFC9BF01" />
 
-                            <RadioGroup
+                            <LinearLayout
                                 android:id="@+id/sabtu"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/sabtu_jam1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="10.00-12.00"/>
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/sabtu_jam2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="13.00-15.00"/>
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/sabtu_jam3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="16.00-18.00"/>
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/sabtu_jam4"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="19.00-21.00"/>
-                            </RadioGroup>
+                            </LinearLayout>
                         </LinearLayout>
 
                     </LinearLayout>
@@ -335,36 +335,36 @@
                                 android:textSize="20sp"
                                 android:textColor="#FFC9BF01" />
 
-                            <RadioGroup
+                            <LinearLayout
                                 android:id="@+id/minggu"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/minggu_jam1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="10.00-12.00"/>
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/minggu_jam2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="13.00-15.00"/>
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/minggu_jam3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="16.00-18.00"/>
 
-                                <RadioButton
+                                <CheckBox
                                     android:id="@+id/minggu_jam4"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="19.00-21.00"/>
-                            </RadioGroup>
+                            </LinearLayout>
                         </LinearLayout>
 
                     </LinearLayout>
