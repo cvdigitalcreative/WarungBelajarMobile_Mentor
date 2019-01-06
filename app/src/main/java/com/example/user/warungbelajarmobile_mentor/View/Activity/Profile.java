@@ -24,8 +24,8 @@ public class Profile extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        init();
         receiveID();
+        init();
         viewProfile();
     }
 
@@ -49,12 +49,11 @@ public class Profile extends AppCompatActivity{
 
     private void receiveID(){
         id_user = getIntent().getStringExtra("id_user");
+        ref = FirebaseDatabase.getInstance().getReference("mentor");
     }
 
     private void init(){
         tv_name = findViewById(R.id.tv_name);
         tv_number = findViewById(R.id.tv_number);
-//        iv_qr_code = findViewById(R.id.iv_qr_code);
-        ref = FirebaseDatabase.getInstance().getReference("mentor");
     }
 }

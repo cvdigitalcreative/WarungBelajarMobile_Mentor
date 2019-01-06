@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Asus\\AndroidStudioProjects\\WarungBelajarMobile_Mentor\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "C:\\Users\\User\\Documents\\Android\\WarungBelajarMobile_Mentor\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\9f0ea91bb8497ea932e51dd5627a4a03\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\User\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\384e1e5330a71d5b78b6bfc4468893f8\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a6e85a11d0b32726fbd309311031fe69\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\User\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\f0b996372ceb47d670b3fee015a97b8b\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

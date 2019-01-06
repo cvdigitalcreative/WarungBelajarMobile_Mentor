@@ -17,31 +17,31 @@
         android:layout_marginTop="10dp">
 
         <TextView
-            android:id="@+id/item_nama_kursus"
+            android:id="@+id/tv_namaKursus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:textSize="20sp"
+            android:text="Nama Kursus"
             android:textColor="#FFC9BF01"
-            android:text="Nama Kursus"/>
+            android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/item_jenis_kursus"
+            android:id="@+id/tv_jenisKursus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:textSize="18sp"
+            android:text="Jenis Kursus"
             android:textColor="@color/colorPrimary"
-            android:text="Jenis Kursus"/>
+            android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/item_batch"
+            android:id="@+id/tv_batch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:textSize="18sp"
+            android:text="Batch"
             android:textColor="@color/colorPrimary"
-            android:text="Batch"/>
+            android:textSize="18sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,23 +49,23 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/item_hari1"
+                android:id="@+id/tv_hari1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:textSize="18sp"
+                android:text="Hari1"
                 android:textColor="@color/colorPrimary"
-                android:text="Hari1"/>
+                android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/item_jam1"
-                android:paddingLeft="5dp"
+                android:id="@+id/tv_jam1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:textSize="18sp"
+                android:paddingLeft="5dp"
+                android:text="Jam1"
                 android:textColor="@color/colorPrimary"
-                android:text="Jam1"/>
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -74,23 +74,23 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/item_hari2"
+                android:id="@+id/tv_hari2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:textSize="18sp"
+                android:text="Hari2"
                 android:textColor="@color/colorPrimary"
-                android:text="Hari1"/>
+                android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/item_jam2"
-                android:paddingLeft="5dp"
+                android:id="@+id/tv_jam2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:textSize="18sp"
+                android:paddingLeft="5dp"
+                android:text="Jam2"
                 android:textColor="@color/colorPrimary"
-                android:text="Jam1"/>
+                android:textSize="18sp" />
         </LinearLayout>
 
     </LinearLayout>

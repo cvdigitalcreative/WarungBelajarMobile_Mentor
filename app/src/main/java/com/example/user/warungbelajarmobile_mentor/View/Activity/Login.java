@@ -55,10 +55,10 @@ public class Login extends AppCompatActivity{
         }
     }
 
-    @Override
-    public void onBackPressed(){
-        moveTaskToBack(true);
-    }
+//    @Override
+//    public void onBackPressed(){
+//        moveTaskToBack(true);
+//    }
 
     private void init(){
         et_email = findViewById(R.id.et_email);
@@ -83,33 +83,30 @@ public class Login extends AppCompatActivity{
     }
 
     private void login(){
-        final String email = et_email.getText().toString();
-        final String password = et_katasandi.getText().toString();
+        final String email = et_email.getText().toString().trim();
+        final String password = et_katasandi.getText().toString().trim();
 //        btn_login.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
                 if(email.isEmpty()){
-                    Toast.makeText(getApplicationContext(), "email anda belum diisi", Toast.LENGTH_SHORT);
+                    Toast.makeText(getApplicationContext(), "Email Anda Belum Diisi", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if(password.isEmpty()){
-                    Toast.makeText(getApplicationContext(), "password anda belum diisi", Toast.LENGTH_SHORT);
+                    Toast.makeText(getApplicationContext(), "Password Anda Belum Diisi", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
                 mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            Log.d("Notif", "signInWithEmail : success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             Intent intent = new Intent(Login.this, MenuUtama.class);
                             intent.putExtra("id_user", user.getUid());
                             startActivity(intent);
                         }
                         else{
-                            Log.d("Notif", "signInWithEmail : failed");
-                            Toast.makeText(getApplicationContext(), "data salah", Toast.LENGTH_SHORT);
+                            Toast.makeText(getApplicationContext(), "Anda Belum Terdaftar", Toast.LENGTH_SHORT).show();
                             return;
                         }
                     }
