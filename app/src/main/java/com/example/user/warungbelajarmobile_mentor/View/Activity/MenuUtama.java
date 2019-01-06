@@ -18,7 +18,6 @@ public class MenuUtama extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_utama);
 
-        user = getIntent().getStringExtra("id_user");
         init();
         updateJadwal();
         jadwalMengajar();
@@ -31,6 +30,8 @@ public class MenuUtama extends AppCompatActivity{
         btn_jadwalMengajar = findViewById(R.id.btn_jadwalMengajar);
         btn_profile = findViewById(R.id.btn_profile);
         btn_logout = findViewById(R.id.btn_logout);
+
+        user = getIntent().getStringExtra("id_user");
     }
 
     private void updateJadwal(){

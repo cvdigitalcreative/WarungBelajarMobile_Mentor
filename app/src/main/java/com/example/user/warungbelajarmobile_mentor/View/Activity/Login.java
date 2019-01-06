@@ -31,14 +31,7 @@ public class Login extends AppCompatActivity{
 
         init();
         cekLogin();
-//        login();
-
-        btn_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                login();
-            }
-        });
+        login();
     }
 
     @Override
@@ -54,11 +47,6 @@ public class Login extends AppCompatActivity{
             mAuth.removeAuthStateListener(mAuthStateListener);
         }
     }
-
-//    @Override
-//    public void onBackPressed(){
-//        moveTaskToBack(true);
-//    }
 
     private void init(){
         et_email = findViewById(R.id.et_email);
@@ -83,11 +71,11 @@ public class Login extends AppCompatActivity{
     }
 
     private void login(){
-        final String email = et_email.getText().toString().trim();
-        final String password = et_katasandi.getText().toString().trim();
-//        btn_login.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final String email = et_email.getText().toString().trim();
+                final String password = et_katasandi.getText().toString().trim();
                 if(email.isEmpty()){
                     Toast.makeText(getApplicationContext(), "Email Anda Belum Diisi", Toast.LENGTH_SHORT).show();
                     return;
@@ -106,12 +94,12 @@ public class Login extends AppCompatActivity{
                             startActivity(intent);
                         }
                         else{
-                            Toast.makeText(getApplicationContext(), "Anda Belum Terdaftar", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Email atau Password Salah", Toast.LENGTH_SHORT).show();
                             return;
                         }
                     }
                 });
             }
-//        });
-//    }
+        });
+    }
 }
