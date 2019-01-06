@@ -33,8 +33,8 @@ public class RecycleviewAdapter extends RecyclerView.Adapter<RecycleviewAdapter.
 
     public void onBindViewHolder(MyHolder holder, int position) {
         JadwalKursusMentor data = listdata.get(position);
-        holder.tv_namaKursus.setText(data.getPaket());
-        holder.tv_jenisKursus.setText(data.getJenis_kursus());
+        holder.tv_namaKursus.setText(data.getJenis_kursus());
+        holder.tv_jenisKursus.setText(data.getPaket());
         holder.tv_batch.setText(data.getBatch());
         holder.tv_hari1.setText(data.getJadwal().getHari1());
         holder.tv_jam1.setText(data.getJadwal().getJam_pertama());

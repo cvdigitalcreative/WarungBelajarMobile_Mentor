@@ -71,10 +71,10 @@ public class JadwalNgajar extends Fragment {
                     String jenis_kursus = dataSnapshot1.child("jenis_kursus").getValue().toString();
                     String paket = dataSnapshot1.child("paket").getValue().toString();
                     String batch = dataSnapshot1.child("batch").getValue().toString();
-                    String hari1 = dataSnapshot1.child("jadwal").child("hari1").toString();
-                    String jam1 = dataSnapshot1.child("jadwal").child("jam1").toString();
-                    String hari2 = dataSnapshot1.child("jadwal").child("hari2").toString();
-                    String jam2 = dataSnapshot1.child("jadwal").child("jam2").toString();
+                    String hari1 = dataSnapshot1.child("jadwal").child("hari1").getValue().toString().trim();
+                    String jam1 = dataSnapshot1.child("jadwal").child("jam_pertama").getValue().toString().trim();
+                    String hari2 = dataSnapshot1.child("jadwal").child("hari2").getValue().toString().trim();
+                    String jam2 = dataSnapshot1.child("jadwal").child("jam_kedua").getValue().toString().trim();
                     Jadwal jadwal = new Jadwal();
                     jadwal.setHari1(hari1);
                     jadwal.setJam_pertama(jam1);
@@ -84,6 +84,8 @@ public class JadwalNgajar extends Fragment {
                     listdata.setJenis_kursus(jenis_kursus);
                     listdata.setBatch(batch);
                     listdata.setJadwal(jadwal);
+
+                    list.add(listdata);
                 }
                 RecycleviewAdapter recycler = new RecycleviewAdapter(list);
                 RecyclerView.LayoutManager layoutmanager = new LinearLayoutManager(getActivity());
