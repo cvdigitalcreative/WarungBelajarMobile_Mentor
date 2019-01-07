@@ -25,6 +25,11 @@ public class MenuUtama extends AppCompatActivity{
         logout();
     }
 
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
+    }
+
     private void init(){
         btn_updateJadwal = findViewById(R.id.btn_updateJadwal);
         btn_jadwalMengajar = findViewById(R.id.btn_jadwalMengajar);

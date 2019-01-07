@@ -48,6 +48,11 @@ public class Login extends AppCompatActivity{
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
+    }
+
     private void init(){
         et_email = findViewById(R.id.et_email);
         et_katasandi = findViewById(R.id.et_katasandi);
@@ -92,6 +97,7 @@ public class Login extends AppCompatActivity{
                             Intent intent = new Intent(Login.this, MenuUtama.class);
                             intent.putExtra("id_user", user.getUid());
                             startActivity(intent);
+                            finish();
                         }
                         else{
                             Toast.makeText(getApplicationContext(), "Email atau Password Salah", Toast.LENGTH_SHORT).show();
