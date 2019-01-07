@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".View.Fragment.JadwalNgajar">
+    tools:context=".View.Fragment.JadwalNgajar"
+    android:layout_margin="10dp">
 
     <TextView
         android:layout_width="match_parent"
@@ -14,6 +15,13 @@
         android:textSize="25sp"
         android:textColor="#FFC9BF01"
         android:gravity="center"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/black"
+        tools:ignore="ContentDescription" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_jadwal_ngajar"
