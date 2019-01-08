@@ -2,6 +2,7 @@ package com.example.user.warungbelajarmobile_mentor.View.Fragment;
 
 
 //import android.app.Fragment;
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -34,6 +35,7 @@ public class UpdateJadwal extends Fragment {
             cb_MingguSesi1, cb_MingguSesi2, cb_MingguSesi3, cb_MingguSesi4;
     private DatabaseReference mDatabase;
     private String user;
+    private ProgressDialog progressDialog;
 
     public UpdateJadwal() {
         // Required empty public constructor
@@ -48,6 +50,12 @@ public class UpdateJadwal extends Fragment {
         init(view);
         pesanJadwal();
         return view;
+    }
+
+    private void showProgressDialog(){
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Mohon Tunggu");
+        progressDialog.show();
     }
 
     private void init(View view){

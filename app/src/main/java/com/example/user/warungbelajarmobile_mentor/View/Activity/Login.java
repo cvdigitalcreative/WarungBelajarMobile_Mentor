@@ -1,5 +1,6 @@
 package com.example.user.warungbelajarmobile_mentor.View.Activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -23,12 +24,14 @@ public class Login extends AppCompatActivity{
     private Button btn_login;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        progressDialog = new ProgressDialog(this);
         init();
         cekLogin();
         login();
@@ -89,10 +92,12 @@ public class Login extends AppCompatActivity{
                     Toast.makeText(getApplicationContext(), "Password Anda Belum Diisi", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                showProgressDialog();
                 mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
+                            progressDialog.dismiss();
                             FirebaseUser user = mAuth.getCurrentUser();
                             Intent intent = new Intent(Login.this, MenuUtama.class);
                             intent.putExtra("id_user", user.getUid());
@@ -100,6 +105,7 @@ public class Login extends AppCompatActivity{
                             finish();
                         }
                         else{
+                            progressDialog.dismiss();
                             Toast.makeText(getApplicationContext(), "Email atau Password Salah", Toast.LENGTH_SHORT).show();
                             return;
                         }
@@ -107,5 +113,11 @@ public class Login extends AppCompatActivity{
                 });
             }
         });
+    }
+
+    private void showProgressDialog(){
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Mohon Tunggu");
+        progressDialog.show();
     }
 }
