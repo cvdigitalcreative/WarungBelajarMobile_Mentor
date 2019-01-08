@@ -2,15 +2,9 @@ package com.example.user.warungbelajarmobile_mentor.View.Activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.Toast;
 
 import com.example.user.warungbelajarmobile_mentor.R;
 import com.example.user.warungbelajarmobile_mentor.View.Fragment.*;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class BaseUpdateJadwal extends AppCompatActivity{
 
