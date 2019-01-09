@@ -3,6 +3,7 @@ package com.example.user.warungbelajarmobile_mentor.View.Activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,15 +19,24 @@ public class Profile extends AppCompatActivity{
     private TextView tv_name, tv_number;
     private ImageView iv_qr_code;
     private DatabaseReference ref;
+    private ImageView ivBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+        ivBack = (ImageView) findViewById(R.id.ivBack);
         setContentView(R.layout.activity_profile);
 
         receiveID();
         init();
         viewProfile();
+
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 
     private void viewProfile(){

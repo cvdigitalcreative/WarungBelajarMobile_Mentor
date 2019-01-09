@@ -5,8 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="1dp"
     tools:context=".View.Activity.MenuUtama">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tbDoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#028678">
+
+        <TextView
+            android:id="@+id/tvDetailProses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="bottom"
+            android:text="Menu Mentor"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+
+    </android.support.v7.widget.Toolbar>
 
     <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -20,22 +38,22 @@
             android:orientation="vertical"
             android:padding="10dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:text="Menu Mentor"
-                android:textColor="#FFC9BF01"
-                android:textSize="25sp"
-                tools:ignore="HardcodedText" />
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:gravity="center"-->
+                <!--android:text="Menu Mentor"-->
+                <!--android:textColor="#FFC9BF01"-->
+                <!--android:textSize="25sp"-->
+                <!--tools:ignore="HardcodedText" />-->
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_marginTop="10dp"
-                android:background="@android:color/black"
-                tools:ignore="ContentDescription" />
+            <!--<ImageView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="3dp"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:background="@android:color/black"-->
+                <!--tools:ignore="ContentDescription" />-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -45,41 +63,45 @@
 
                 <Button
                     android:id="@+id/btn_updateJadwal"
-                    android:layout_width="250dp"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:background="@android:color/holo_blue_dark"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/ic_back"
                     android:text="Update Jadwal"
-                    android:textColor="@android:color/white"
+                    android:textColor="#000"
+                    android:textStyle="bold"
                     tools:ignore="HardcodedText" />
 
                 <Button
                     android:id="@+id/btn_jadwalMengajar"
-                    android:layout_width="250dp"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:background="@android:color/holo_blue_dark"
+                    android:background="@drawable/ic_back"
                     android:text="Jadwal Ngajar"
-                    android:textColor="@android:color/white"
+                    android:textColor="#000"
+                    android:textStyle="bold"
                     tools:ignore="HardcodedText" />
 
                 <Button
                     android:id="@+id/btn_profile"
-                    android:layout_width="250dp"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:background="@android:color/holo_blue_dark"
-                    android:text="My Profile"
-                    android:textColor="@android:color/white"
+                    android:background="@drawable/ic_back"
+                    android:text="Profil Mentor"
+                    android:textColor="#000"
+                    android:textStyle="bold"
                     tools:ignore="HardcodedText" />
 
                 <Button
                     android:id="@+id/btn_logout"
-                    android:layout_width="250dp"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:background="@android:color/holo_blue_dark"
+                    android:layout_marginTop="60dp"
+                    android:background="#FFC9BF01"
                     android:text="Logout"
+                    android:textStyle="bold"
                     android:textColor="@android:color/white"
                     tools:ignore="HardcodedText" />
             </LinearLayout>

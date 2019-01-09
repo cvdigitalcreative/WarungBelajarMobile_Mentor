@@ -23,27 +23,27 @@
                 android:orientation="vertical"
                 android:layout_margin="10dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical">-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Update Jadwal"
-                        android:textSize="25sp"
-                        android:textColor="#FFC9BF01"
-                        android:gravity="center"/>
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:text="Update Jadwal"-->
+                        <!--android:textSize="25sp"-->
+                        <!--android:textColor="#FFC9BF01"-->
+                        <!--android:gravity="center"/>-->
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="3dp"
-                        android:layout_marginTop="10dp"
-                        android:background="@android:color/black"
-                        tools:ignore="ContentDescription" />
-                </LinearLayout>
+                    <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="3dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:background="@android:color/black"-->
+                        <!--tools:ignore="ContentDescription" />-->
+                <!--</LinearLayout>-->
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -85,7 +85,8 @@
                                         android:layout_height="wrap_content"
                                         android:text="Selasa"
                                         android:textSize="20sp"
-                                        android:textColor="#FFC9BF01" />
+                                        android:textStyle="bold"
+                                        android:textColor="#008577" />
 
                                     <LinearLayout
                                         android:id="@+id/selasa"
@@ -137,8 +138,9 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="Rabu"
+                                        android:textStyle="bold"
                                         android:textSize="20sp"
-                                        android:textColor="#FFC9BF01" />
+                                        android:textColor="#008577" />
 
                                     <LinearLayout
                                         android:id="@+id/rabu"
@@ -191,7 +193,8 @@
                                         android:layout_height="wrap_content"
                                         android:text="Kamis"
                                         android:textSize="20sp"
-                                        android:textColor="#FFC9BF01" />
+                                        android:textStyle="bold"
+                                        android:textColor="#008577" />
 
                                     <LinearLayout
                                         android:id="@+id/kamis"
@@ -253,7 +256,8 @@
                                         android:layout_height="wrap_content"
                                         android:text="Jumat"
                                         android:textSize="20sp"
-                                        android:textColor="#FFC9BF01" />
+                                        android:textStyle="bold"
+                                        android:textColor="#008577" />
 
                                     <LinearLayout
                                         android:id="@+id/jumat"
@@ -305,8 +309,9 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="Sabtu"
+                                        android:textStyle="bold"
                                         android:textSize="20sp"
-                                        android:textColor="#FFC9BF01" />
+                                        android:textColor="#008577" />
 
                                     <LinearLayout
                                         android:id="@+id/sabtu"
@@ -359,7 +364,8 @@
                                         android:layout_height="wrap_content"
                                         android:text="Minggu"
                                         android:textSize="20sp"
-                                        android:textColor="#FFC9BF01" />
+                                        android:textStyle="bold"
+                                        android:textColor="#008577" />
 
                                     <LinearLayout
                                         android:id="@+id/minggu"
@@ -420,9 +426,11 @@
             android:id="@+id/btn_pesanJadwal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/holo_blue_dark"
+            android:background="#FFC9BF01"
             android:padding="10dp"
             android:text="Update"
+            style="bold"
+            android:layout_margin="10dp"
 
             android:textColor="@android:color/white"/>
     </LinearLayout>

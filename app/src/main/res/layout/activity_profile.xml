@@ -4,8 +4,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
     tools:context=".View.Activity.Profile">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tbDoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#028678">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/ic_arrow_back_black_24dp" />
+
+        <TextView
+            android:id="@+id/tvDetailProses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="bottom"
+            android:text="Profil Mentor"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+
+    </android.support.v7.widget.Toolbar>
 
     <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -23,16 +48,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:padding="20dp">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center"
-                    android:text="My Profile"
-                    android:textColor="#FFC9BF01"
-                    android:textSize="25sp" />
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="My Profile"-->
+                    <!--android:textColor="#FFC9BF01"-->
+                    <!--android:textSize="25sp" />-->
 
                 <TextView
                     android:layout_width="match_parent"

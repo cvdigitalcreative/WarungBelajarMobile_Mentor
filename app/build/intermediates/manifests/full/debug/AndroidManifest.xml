@@ -30,17 +30,32 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.user.warungbelajarmobile_mentor.View.Activity.Login" >
+        <activity
+            android:name="com.example.user.warungbelajarmobile_mentor.View.Activity.Login"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.user.warungbelajarmobile_mentor.View.Activity.MenuUtama" />
-        <activity android:name="com.example.user.warungbelajarmobile_mentor.View.Activity.Profile" />
-        <activity android:name="com.example.user.warungbelajarmobile_mentor.View.Activity.BaseJadwalNgajar" />
-        <activity android:name="com.example.user.warungbelajarmobile_mentor.View.Activity.BaseUpdateJadwal" />
+        <activity
+            android:name="com.example.user.warungbelajarmobile_mentor.View.Activity.MenuUtama"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.example.user.warungbelajarmobile_mentor.View.Activity.Profile"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.example.user.warungbelajarmobile_mentor.View.Activity.BaseJadwalNgajar"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.example.user.warungbelajarmobile_mentor.View.Activity.BaseUpdateJadwal"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
 
         <meta-data
             android:name="android.support.VERSION"
