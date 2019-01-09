@@ -1,5 +1,6 @@
 package com.example.user.warungbelajarmobile_mentor.View.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -24,8 +25,9 @@ public class Profile extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        ivBack = (ImageView) findViewById(R.id.ivBack);
         setContentView(R.layout.activity_profile);
+
+        ivBack = (ImageView) findViewById(R.id.ivBack);
 
         receiveID();
         init();
@@ -37,6 +39,17 @@ public class Profile extends AppCompatActivity{
                 onBackPressed();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        sentoHome();
+    }
+
+    private void sentoHome() {
+        Intent startIntent = new Intent(Profile.this, MenuUtama.class);
+        startActivity(startIntent);
+        finish();
     }
 
     private void viewProfile(){

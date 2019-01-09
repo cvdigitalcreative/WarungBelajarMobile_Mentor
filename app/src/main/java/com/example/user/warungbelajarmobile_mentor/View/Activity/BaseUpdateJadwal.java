@@ -1,6 +1,7 @@
 package com.example.user.warungbelajarmobile_mentor.View.Activity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -17,8 +18,9 @@ public class BaseUpdateJadwal extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        ivBack = (ImageView) findViewById(R.id.ivBack);
         setContentView(R.layout.activity_base_update_jadwal);
+        
+        ivBack = (ImageView) findViewById(R.id.ivBack);
 
         receiveID();
         goToUpdateJadwal();
@@ -29,6 +31,17 @@ public class BaseUpdateJadwal extends AppCompatActivity{
                 onBackPressed();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        sentoHome();
+    }
+
+    private void sentoHome() {
+        Intent startIntent = new Intent(BaseUpdateJadwal.this, MenuUtama.class);
+        startActivity(startIntent);
+        finish();
     }
 
     private void receiveID(){
