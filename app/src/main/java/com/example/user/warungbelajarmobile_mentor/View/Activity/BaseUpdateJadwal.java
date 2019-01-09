@@ -19,29 +19,27 @@ public class BaseUpdateJadwal extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base_update_jadwal);
-        
-        ivBack = (ImageView) findViewById(R.id.ivBack);
 
+        init();
         receiveID();
+        sentoHome();
         goToUpdateJadwal();
-
-        ivBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
     }
 
-    @Override
-    public void onBackPressed() {
-        sentoHome();
+    private void init(){
+        ivBack = findViewById(R.id.ivBack);
+        user = getIntent().getStringExtra("id_user");
     }
 
     private void sentoHome() {
-        Intent startIntent = new Intent(BaseUpdateJadwal.this, MenuUtama.class);
-        startActivity(startIntent);
-        finish();
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BaseUpdateJadwal.this, MenuUtama.class);
+                intent.putExtra("id_user", user);
+                startActivity(intent);
+            }
+        });
     }
 
     private void receiveID(){

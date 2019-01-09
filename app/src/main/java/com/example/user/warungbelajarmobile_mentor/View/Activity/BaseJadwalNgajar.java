@@ -21,28 +21,27 @@ public class BaseJadwalNgajar extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base_jadwal_ngajar);
-        ivBack = (ImageView) findViewById(R.id.ivBack);
 
+        init();
         receiveID();
+        sentoHome();
         goToJadwalNgajar();
-
-        ivBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
     }
 
-    @Override
-    public void onBackPressed() {
-        sentoHome();
+    private void init(){
+        ivBack = findViewById(R.id.ivBack);
     }
 
     private void sentoHome() {
-        Intent startIntent = new Intent(BaseJadwalNgajar.this, MenuUtama.class);
-        startActivity(startIntent);
-        finish();
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BaseJadwalNgajar.this, MenuUtama.class);
+                intent.putExtra("id_user", user);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void receiveID(){

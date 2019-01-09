@@ -18,38 +18,30 @@ import com.google.firebase.database.ValueEventListener;
 public class Profile extends AppCompatActivity{
     private String id_user;
     private TextView tv_name, tv_number;
-    private ImageView iv_qr_code;
     private DatabaseReference ref;
     private ImageView ivBack;
+    private String user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        ivBack = (ImageView) findViewById(R.id.ivBack);
-
         receiveID();
         init();
-        viewProfile();
-
-        ivBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
-    }
-
-    @Override
-    public void onBackPressed() {
         sentoHome();
+        viewProfile();
     }
 
     private void sentoHome() {
-        Intent startIntent = new Intent(Profile.this, MenuUtama.class);
-        startActivity(startIntent);
-        finish();
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Profile.this, MenuUtama.class);
+                intent.putExtra("id_user", user);
+                startActivity(intent);
+            }
+        });
     }
 
     private void viewProfile(){
@@ -78,5 +70,7 @@ public class Profile extends AppCompatActivity{
     private void init(){
         tv_name = findViewById(R.id.tv_name);
         tv_number = findViewById(R.id.tv_number);
+        ivBack = findViewById(R.id.ivBack);
+        user = getIntent().getStringExtra("id_user");
     }
 }

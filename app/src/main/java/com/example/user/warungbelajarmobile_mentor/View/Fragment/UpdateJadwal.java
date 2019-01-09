@@ -226,7 +226,7 @@ public class UpdateJadwal extends Fragment {
                 updateJadwalJumat();
                 updateJadwalSabtu();
                 updateJadwalMinggu();
-                Toast.makeText(getActivity(), "SesiJadwal Berhasil Diubah", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Sesi Jadwal Berhasil Diubah", Toast.LENGTH_SHORT).show();
                 return;
             }
         });
