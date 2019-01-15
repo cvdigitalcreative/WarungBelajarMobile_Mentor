@@ -18,6 +18,13 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.Map;
 
 public class Login extends AppCompatActivity{
     private EditText et_email, et_katasandi;
@@ -25,6 +32,7 @@ public class Login extends AppCompatActivity{
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
     private ProgressDialog progressDialog;
+    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -61,6 +69,7 @@ public class Login extends AppCompatActivity{
         et_katasandi = findViewById(R.id.et_katasandi);
         btn_login = findViewById(R.id.btn_login);
         mAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("mentor");
     }
 
     private void cekLogin(){
@@ -93,24 +102,66 @@ public class Login extends AppCompatActivity{
                     return;
                 }
                 showProgressDialog();
-                mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                mDatabase.addValueEventListener(new ValueEventListener() {
                     @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            progressDialog.dismiss();
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            Intent intent = new Intent(Login.this, MenuUtama.class);
-                            intent.putExtra("id_user", user.getUid());
-                            startActivity(intent);
-                            finish();
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        int check = 0;
+                        for (DataSnapshot ds: dataSnapshot.getChildren()){
+                            String emailUser = ds.child("profile_mentor").child("email").getValue().toString();
+                            if(email.equals(emailUser))
+                                check = 1;
+                        }
+                        progressDialog.dismiss();
+                        if(check == 1){
+                            mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if(task.isSuccessful()){
+                                        progressDialog.dismiss();
+                                        FirebaseUser user = mAuth.getCurrentUser();
+                                        Intent intent = new Intent(Login.this, MenuUtama.class);
+                                        intent.putExtra("id_user", user.getUid());
+                                        startActivity(intent);
+                                        finish();
+                                    }
+                                    else{
+                                        progressDialog.dismiss();
+                                        Toast.makeText(getApplicationContext(), "Email atau Password Salah", Toast.LENGTH_SHORT).show();
+                                        return;
+                                    }
+                                }
+                            });
                         }
                         else{
                             progressDialog.dismiss();
-                            Toast.makeText(getApplicationContext(), "Email atau Password Salah", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Anda Bukan Mentor", Toast.LENGTH_SHORT).show();
                             return;
                         }
                     }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
                 });
+//                mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task) {
+//                        if(task.isSuccessful()){
+//                            progressDialog.dismiss();
+//                            FirebaseUser user = mAuth.getCurrentUser();
+//                            Intent intent = new Intent(Login.this, MenuUtama.class);
+//                            intent.putExtra("id_user", user.getUid());
+//                            startActivity(intent);
+//                            finish();
+//                        }
+//                        else{
+//                            progressDialog.dismiss();
+//                            Toast.makeText(getApplicationContext(), "Email atau Password Salah", Toast.LENGTH_SHORT).show();
+//                            return;
+//                        }
+//                    }
+//                });
             }
         });
     }
